@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>Master Your Learning | Study Kit</title>
+<style>
+:root{--bg:#0b1220;--panel:#121e31;--panel2:#18263c;--line:#293a54;--text:#eef4ff;--muted:#a9b8ce;--accent:#8b9cff;--mint:#69e0c0;--gold:#f6c76b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#1b2b4b 0,transparent 34%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}.top{position:sticky;top:0;z-index:5;background:#0b1220eF;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.nav{display:flex;align-items:center;justify-content:space-between;padding:13px 0;gap:14px}.brand{font-weight:850;letter-spacing:.08em;font-size:.9rem}.brand span{color:var(--mint)}.navlinks{display:flex;gap:16px;flex-wrap:wrap;font-size:.86rem;color:var(--muted)}.navlinks a:hover{color:white}
+.hero{padding:66px 0 42px;display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center}.eyebrow{color:var(--mint);font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.hero h1{font-size:clamp(2.5rem,7vw,5.4rem);line-height:.98;letter-spacing:-.055em;margin:14px 0}.hero h1 em{font-style:normal;color:var(--accent)}.lead{color:var(--muted);max-width:650px;font-size:1.08rem}.hero-card{border:1px solid var(--line);background:linear-gradient(145deg,#1c2b46,#111b2d);border-radius:26px;padding:24px;box-shadow:0 20px 60px #0005}.orb{width:100%;aspect-ratio:1.35;border-radius:20px;background:radial-gradient(circle at 50% 45%,#9caeff55,transparent 33%),linear-gradient(135deg,#243a62,#142238);display:grid;place-items:center;font-size:5rem}.hero-card small{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;border-radius:12px;background:var(--accent);color:#101827;font-weight:800;border:0;cursor:pointer}.btn.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}.btn.mint{background:var(--mint)}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+section{padding:35px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:18px}.section-head h2{font-size:clamp(1.6rem,4vw,2.4rem);margin:5px 0}.section-head p{color:var(--muted);margin:0;max-width:570px}.kicker{font-size:.75rem;color:var(--mint);font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:19px;min-width:0}.card h3{margin:8px 0 6px;font-size:1.1rem}.card p{margin:0;color:var(--muted);font-size:.92rem}.icon{font-size:1.6rem}.tag{display:inline-block;margin-top:12px;color:var(--mint);font-size:.74rem;font-weight:800;letter-spacing:.06em}.video-card{display:flex;flex-direction:column;gap:12px}.video-top{height:112px;border-radius:13px;background:linear-gradient(135deg,#293b62,#18253b);display:grid;place-items:center;font-size:2.5rem}.video-card .btn{margin-top:auto}.game-card{display:flex;flex-direction:column;gap:12px}.game-card .btn{margin-top:auto}.note{padding:14px 16px;border:1px solid #5b4c2b;background:#2b2518;border-radius:14px;color:#f8e4b5;font-size:.9rem;margin-top:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:15px}.steps{display:grid;gap:10px}.step{display:flex;gap:12px;align-items:flex-start;padding:13px;border-radius:14px;background:var(--panel);border:1px solid var(--line)}.num{flex:0 0 30px;height:30px;border-radius:9px;background:#2c3c60;display:grid;place-items:center;color:var(--mint);font-weight:900}
+.timer{text-align:center}.time{font-variant-numeric:tabular-nums;font-size:3.6rem;font-weight:850;letter-spacing:-.05em;margin:12px}.timer-controls{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}.timer small{color:var(--muted)}
+.quiz-q{font-weight:750;margin-bottom:12px}.answers{display:grid;gap:8px}.answer{padding:11px 13px;border-radius:11px;border:1px solid var(--line);background:#111d30;color:var(--text);text-align:left;cursor:pointer}.answer:hover{border-color:var(--accent)}#quizResult{margin-top:12px;color:var(--mint);font-weight:700;min-height:24px}
+.plan{overflow:auto}table{width:100%;border-collapse:collapse;min-width:520px}th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left;font-size:.9rem}th{color:var(--mint);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}td{color:var(--muted)}
+.qrbox{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.qr{background:white;padding:12px;border-radius:14px;min-width:140px;min-height:140px;display:grid;place-items:center;color:#111}.qr canvas,.qr img{max-width:100%;height:auto!important}.footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.85rem;margin-top:25px}.small{font-size:.8rem;color:var(--muted)}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:44px}.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:12px}.qrbox{grid-template-columns:1fr}.qr{width:150px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{font-size:3.1rem}.section-head{display:block}.section-head p{margin-top:8px}.hero-card{padding:15px}}
+.tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}.tools input,.chk-add input,.chk-row input[type=text]{background:#111d30;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:9px 11px;font:inherit;font-size:.88rem;min-width:0}.tools input{flex:1 1 180px}.btn.sm{padding:8px 12px;font-size:.82rem;border-radius:10px}.chips{display:none;gap:6px;flex-wrap:wrap;width:100%}.chips.on{display:flex}.chip{padding:5px 11px;border-radius:99px;background:#2c3c60;color:var(--mint);font-size:.8rem;font-weight:700;cursor:pointer;border:0}.ed-on td[contenteditable]{outline:1px dashed var(--accent);outline-offset:-3px;border-radius:6px;color:var(--text)}.xbtn{background:none;border:0;color:#ff8d8d;cursor:pointer;font-size:1rem}.chk-row{display:flex;gap:8px;align-items:center;margin:6px 0}.chk-row input[type=text]{flex:1}.chk-add{display:none;gap:8px;margin-top:10px}.chk-add.on{display:flex}.chk-add input{flex:1}.chk-tools{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap nav"><a class="brand" href="#home">MASTER <span>YOUR LEARNING</span></a><nav class="navlinks"><a href="#focus">Focus</a><a href="#videos">Vidéos</a><a href="#games">Jeux</a><a href="#plan">14 jours</a><a href="#quiz">Quiz</a><a href="#share">Partager</a></nav></div></header>
+<main class="wrap" id="home">
+<section class="hero">
+<div><div class="eyebrow">STUDY SKILLS 1 · MINI-PROJET</div><h1>Learn smarter.<br><em>Focus better.</em></h1><p class="lead">Un kit interactif pour découvrir des méthodes d’apprentissage efficaces, mieux organiser ses révisions et transformer ses bonnes intentions en habitudes concrètes.</p><div class="actions"><a class="btn" href="#focus">Explorer le Study Kit ↗</a><a class="btn secondary" href="#plan">Voir le défi de 14 jours</a></div></div>
+<div class="hero-card"><div class="orb">🧠</div><h3>Votre espace pour apprendre efficacement</h3><small>Concentration · Mémorisation · Organisation · Pratique</small></div>
+</section>
+
+<section id="focus"><div class="section-head"><div><div class="kicker">01 · Attention</div><h2>Focus Zone</h2></div><p>Préparez votre esprit et votre environnement avant de commencer une séance.</p></div>
+<div class="grid">
+<article class="card"><div class="icon">🧹</div><h3>Un bureau simple</h3><p>Gardez uniquement le matériel utile. Éloignez le téléphone et désactivez les notifications.</p></article>
+<article class="card"><div class="icon">💡</div><h3>Un environnement adapté</h3><p>Choisissez un endroit calme, bien éclairé et confortable. Préparez l’eau, les cours et les outils avant de commencer.</p></article>
+<article class="card"><div class="icon">⏱️</div><h3>Une tâche à la fois</h3><p>Définissez un objectif précis pour la séance. Évitez de passer constamment d’une tâche à une autre.</p></article>
+</div>
+<div class="two" style="margin-top:15px">
+<div class="card timer"><div class="kicker">Pomodoro · Minuteur de concentration</div><div class="time" id="clock">25:00</div><small id="timerMode">Session de travail</small><div class="timer-controls" style="margin-top:16px"><button class="btn mint" id="startTimer">Démarrer</button><button class="btn secondary" id="pauseTimer">Pause</button><button class="btn secondary" id="resetTimer">Réinitialiser</button></div><div class="timer-controls" style="margin-top:10px"><button class="btn secondary" id="workMode">25 min travail</button><button class="btn secondary" id="breakMode">5 min pause</button></div></div>
+<div class="card"><div class="kicker">Mini-checklist</div><h3>Avant de réviser</h3><div id="chkList"></div><div class="chk-add" id="chkAdd"><input type="text" id="chkNew" placeholder="Nouvel élément…"><button class="btn mint sm" id="chkAddBtn">+ Ajouter</button></div><div class="chk-tools"><button class="btn secondary sm" id="chkEdit">✎ Modifier</button><button class="btn secondary sm" id="chkReset" style="display:none">↺ Par défaut</button></div><p class="small" style="margin-top:12px">Cochez les éléments avant de lancer le minuteur.</p></div>
+</div></section>
+
+<section id="videos"><div class="section-head"><div><div class="kicker">02 · Ressources vidéo</div><h2>Videos</h2></div><p>Trois vidéos sélectionnées pour réfléchir à la concentration, aux méthodes de travail et à la productivité.</p></div>
+<div class="grid">
+<article class="card video-card"><div class="video-top">🎯</div><div><span class="tag">CONCENTRATION</span><h3>5 نصائح للتركيز المطلق أثناء المذاكرة</h3><p>Des conseils pour mieux gérer son attention pendant les révisions.</p></div><a class="btn secondary" target="_blank" rel="noopener" href="https://youtu.be/CNlj-uAiqmA">Regarder sur YouTube ↗</a></article>
+<article class="card video-card"><div class="video-top">📚</div><div><span class="tag">SMART STUDY</span><h3>كيف تذاكر أقل وتذاكر بذكاء؟</h3><p>Découvrir des façons de travailler plus efficacement, pas seulement plus longtemps.</p></div><a class="btn secondary" target="_blank" rel="noopener" href="https://youtu.be/A7zCOOEBxhU">Regarder sur YouTube ↗</a></article>
+<article class="card video-card"><div class="video-top">⚡</div><div><span class="tag">PRODUCTIVITÉ</span><h3>كيف تنجز في هذا العالم المختل</h3><p>Une réflexion sur la productivité et la discipline dans un environnement distrayant.</p></div><a class="btn secondary" target="_blank" rel="noopener" href="https://youtu.be/FM3jv3U9Nh8">Regarder sur YouTube ↗</a></article>
+</div><p class="small" style="margin-top:12px">Les vidéos sont en arabe. Les descriptions en français résument leur thème d’après les titres fournis.</p></section>
+
+<section id="games"><div class="section-head"><div><div class="kicker">03 · Pause active</div><h2>Brain Games</h2></div><p>Des défis courts de logique, de mémoire et d’attention. Choisissez une activité, jouez quelques minutes, puis revenez à votre travail.</p></div>
+<div class="grid">
+<article class="card game-card"><div class="icon">🔢</div><div><h3>Sudoku</h3><p>Complétez la grille en respectant les règles des lignes, colonnes et carrés 3×3. Un défi de logique.</p></div><a class="btn secondary" target="_blank" rel="noopener" href="https://sudoku.com/">Jouer au Sudoku ↗</a></article>
+<article class="card game-card"><div class="icon">🃏</div><div><h3>Memory Match</h3><p>Retournez les cartes et retrouvez les paires en mémorisant leurs positions.</p></div><a class="btn secondary" target="_blank" rel="noopener" href="https://kepogames.com/games/memory-match">Jouer au Memory ↗</a></article>
+<article class="card game-card"><div class="icon">♟️</div><div><h3>Chess Puzzles</h3><p>Analysez une position et trouvez le meilleur coup. Prenez le temps de réfléchir avant de jouer.</p></div><a class="btn secondary" target="_blank" rel="noopener" href="https://lichess.org/training">Résoudre un puzzle ↗</a></article>
+<article class="card game-card"><div class="icon">🎨</div><div><h3>Stroop Test</h3><p>Nommez la couleur de l’encre sans lire le mot. Un exercice classique d’interférence attentionnelle.</p></div><a class="btn secondary" target="_blank" rel="noopener" href="https://psychology.com/tests/stroop">Faire le test ↗</a></article>
+<article class="card game-card"><div class="icon">👀</div><div><h3>Visual Search & Schulte</h3><p>Repérez une cible dans une grille ou trouvez les nombres dans l’ordre.</p></div><a class="btn secondary" target="_blank" rel="noopener" href="https://onequicktry.com/attention-tests">Essayer les exercices ↗</a></article>
+<article class="card game-card"><div class="icon">🔣</div><div><h3>Number Sequences</h3><p>Observez une suite et trouvez la règle pour découvrir le nombre suivant.</p></div><a class="btn secondary" target="_blank" rel="noopener" href="https://last-control.com/tests/number-sequence-puzzles">Résoudre des suites ↗</a></article>
+</div><div class="note">À retenir : ces jeux sont des activités ludiques de logique, de mémoire ou d’attention. Ils ne remplacent pas les méthodes d’étude et ne garantissent pas une amélioration des résultats scolaires. Utilisez-les comme de courtes pauses, pas comme une nouvelle source de distraction.</div></section>
+
+<section id="plan"><div class="section-head"><div><div class="kicker">04 · Travail pratique obligatoire</div><h2>Défi d’apprentissage · 14 jours</h2></div><p>Un exemple de programme progressif à adapter aux cours et aux examens de chaque étudiant.</p></div>
+<div class="tools"><input id="major" placeholder="Ma filière (ex. Informatique, Droit…)"><input id="subjects" placeholder="Mes matières, séparées par des virgules"><button class="btn secondary sm" id="planEdit">✎ Modifier</button><button class="btn mint sm" id="planAdd" style="display:none">+ Jour</button><button class="btn secondary sm" id="planReset" style="display:none">↺ Par défaut</button><div class="chips" id="chips"></div></div>
+<div class="card plan"><table id="planTable"><thead><tr><th>Jour</th><th>Objectif</th><th>Activité proposée</th><th id="delTh" style="display:none"></th></tr></thead><tbody id="planBody">
+<tr><td>01</td><td>Faire le point</td><td>Choisir une matière et définir un objectif SMART.</td></tr><tr><td>02</td><td>Organiser</td><td>Préparer un espace de travail et un planning.</td></tr><tr><td>03</td><td>Prendre des notes</td><td>Tester la méthode Cornell sur un cours.</td></tr><tr><td>04</td><td>Structurer</td><td>Créer une carte mentale d’un chapitre.</td></tr><tr><td>05</td><td>Se tester</td><td>Faire un Active Recall sans regarder le cours.</td></tr><tr><td>06</td><td>Mémoriser</td><td>Créer 10 flashcards sur les notions clés.</td></tr><tr><td>07</td><td>Faire le bilan</td><td>Réviser les cartes et identifier les difficultés.</td></tr><tr><td>08</td><td>Espacer</td><td>Revoir les notions du jour 5 et du jour 6.</td></tr><tr><td>09</td><td>Approfondir</td><td>Résoudre des exercices sans consulter la correction.</td></tr><tr><td>10</td><td>Consolider</td><td>Faire un quiz personnel et corriger les erreurs.</td></tr><tr><td>11</td><td>Réactiver</td><td>Revoir les flashcards difficiles.</td></tr><tr><td>12</td><td>S’entraîner</td><td>Faire un exercice ou sujet en temps limité.</td></tr><tr><td>13</td><td>Réviser</td><td>Expliquer le chapitre à voix haute sans support.</td></tr><tr><td>14</td><td>Évaluer</td><td>Refaire un test et comparer avec le point de départ.</td></tr>
+</tbody></table></div></section>
+
+<section id="quiz"><div class="section-head"><div><div class="kicker">05 · Vérifiez vos connaissances</div><h2>Mini Quiz</h2></div><p>Quelques questions rapides pour vérifier les notions essentielles.</p></div>
+<div class="card"><div id="quizArea"><div class="quiz-q" id="question">Quelle méthode consiste à retrouver une information sans regarder le cours ?</div><div class="answers" id="answers"><button class="answer" data-correct="false">La relecture passive</button><button class="answer" data-correct="true">L’Active Recall</button><button class="answer" data-correct="false">Le multitâche</button></div><div id="quizResult"></div><button class="btn secondary" id="nextQuestion" style="margin-top:12px">Question suivante →</button></div></div>
+</section>
+
+<section id="share"><div class="section-head"><div><div class="kicker">06 · Partager</div><h2>Share QR</h2></div><p>Scannez le code pour ouvrir le Study Kit sur un autre téléphone et le partager avec vos amis.</p></div>
+<div class="card qrbox"><div><h3>Partagez ce Study Kit</h3><p class="small" style="margin-bottom:12px">Le lien de la page est utilisé automatiquement. Si vous ouvrez le fichier en local, collez ici le lien où il est hébergé.</p><div class="tools" style="margin:0"><input id="shareUrl" placeholder="https://…"><button class="btn mint sm" id="copyUrl">Copier le lien</button></div></div><div class="qr" id="qrcode"></div></div></section>
+
+<footer class="footer"><div class="kicker">STUDY SKILLS 1 · MINI-PROJET</div><p><strong>MASTER YOUR LEARNING</strong> — Learn smarter. Focus better.</p><p>Ressources pédagogiques sélectionnées pour accompagner les étudiants dans leurs méthodes d’apprentissage.</p><p class="small">Les liens externes appartiennent à leurs éditeurs respectifs. Vérifiez leur contenu et leurs conditions d’utilisation avant de les recommander officiellement.</p></footer>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+let duration=25*60,remaining=duration,interval=null;
+const clock=document.getElementById('clock'),mode=document.getElementById('timerMode');
+function showTime(){clock.textContent=String(Math.floor(remaining/60)).padStart(2,'0')+':'+String(remaining%60).padStart(2,'0')}
+function stopTimer(){if(interval){clearInterval(interval);interval=null}}
+document.getElementById('startTimer').onclick=()=>{if(interval)return;interval=setInterval(()=>{remaining--;showTime();if(remaining<=0){stopTimer();mode.textContent='Temps écoulé · prenez une courte pause !';}},1000)};
+document.getElementById('pauseTimer').onclick=stopTimer;
+document.getElementById('resetTimer').onclick=()=>{stopTimer();remaining=duration;showTime()};
+document.getElementById('workMode').onclick=()=>{stopTimer();duration=25*60;remaining=duration;mode.textContent='Session de travail';showTime()};
+document.getElementById('breakMode').onclick=()=>{stopTimer();duration=5*60;remaining=duration;mode.textContent='Pause';showTime()};
+const questions=[
+{q:'Quelle méthode consiste à retrouver une information sans regarder le cours ?',a:['La relecture passive','L’Active Recall','Le multitâche'],c:1,e:'Exact ! L’Active Recall consiste à récupérer activement l’information de mémoire.'},
+{q:'Quel est le principe de la répétition espacée ?',a:['Tout réviser en une nuit','Revoir les notions à des intervalles','Lire sans se tester'],c:1,e:'Exact ! On répartit les révisions dans le temps.'},
+{q:'Que faut-il faire avant une séance de travail concentrée ?',a:['Ouvrir toutes les notifications','Définir une tâche précise','Faire plusieurs tâches à la fois'],c:1,e:'Exact ! Un objectif clair aide à orienter la séance.'},
+{q:'À quoi sert la méthode Cornell ?',a:['Organiser les notes','Mesurer la vitesse de lecture','Remplacer les examens'],c:0,e:'Exact ! Cornell structure les notes, les mots-clés et le résumé.'},
+{q:'Quel est le rôle des flashcards ?',a:['Décorer le bureau','Se tester avec question et réponse','Éviter toute révision'],c:1,e:'Exact ! Les flashcards favorisent le rappel actif.'}
+];let qi=0;
+function renderQ(){const q=questions[qi];document.getElementById('question').textContent=(qi+1)+' / '+questions.length+' — '+q.q;const box=document.getElementById('answers');box.innerHTML='';q.a.forEach((a,i)=>{const b=document.createElement('button');b.className='answer';b.textContent=a;b.onclick=()=>{document.getElementById('quizResult').textContent=i===q.c?q.e:'Pas tout à fait. '+q.e;[...box.children].forEach(x=>x.disabled=true)};box.appendChild(b)});document.getElementById('quizResult').textContent=''}
+document.getElementById('nextQuestion').onclick=()=>{qi=(qi+1)%questions.length;renderQ()};renderQ();
+
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+/* ---- Plan 14 jours modifiable ---- */
+const pBody=document.getElementById('planBody'),pTable=document.getElementById('planTable');
+const defPlan=[...pBody.querySelectorAll('tr')].map(r=>[r.children[1].textContent,r.children[2].textContent]);
+let plan=store.get('myl_plan',defPlan),pEdit=false;
+function renderPlan(){pBody.innerHTML='';pTable.classList.toggle('ed-on',pEdit);document.getElementById('delTh').style.display=pEdit?'':'none';
+plan.forEach((r,i)=>{const tr=document.createElement('tr');const d=document.createElement('td');d.textContent=String(i+1).padStart(2,'0');tr.appendChild(d);
+[0,1].forEach(j=>{const td=document.createElement('td');td.textContent=r[j];if(pEdit){td.contentEditable='true';td.oninput=()=>{plan[i][j]=td.textContent;store.set('myl_plan',plan)}}tr.appendChild(td)});
+if(pEdit){const x=document.createElement('td'),b=document.createElement('button');b.className='xbtn';b.textContent='✕';b.title='Supprimer ce jour';b.onclick=()=>{plan.splice(i,1);store.set('myl_plan',plan);renderPlan()};x.appendChild(b);tr.appendChild(x)}
+pBody.appendChild(tr)})}
+const majorI=document.getElementById('major'),subjI=document.getElementById('subjects'),chips=document.getElementById('chips');
+majorI.value=store.get('myl_major','');subjI.value=store.get('myl_subjects','');
+function renderChips(){chips.innerHTML='';chips.classList.toggle('on',pEdit);if(!pEdit)return;
+const l=subjI.value.split(',').map(x=>x.trim()).filter(Boolean);
+if(l.length){const h=document.createElement('span');h.className='small';h.textContent='Cliquez dans une case puis sur une matière pour l’insérer :';chips.appendChild(h)}
+l.forEach(m=>{const c=document.createElement('button');c.className='chip';c.textContent=m;c.onmousedown=e=>e.preventDefault();c.onclick=()=>{if(document.activeElement&&document.activeElement.isContentEditable)document.execCommand('insertText',false,m)};chips.appendChild(c)})}
+majorI.oninput=()=>store.set('myl_major',majorI.value);subjI.oninput=()=>{store.set('myl_subjects',subjI.value);renderChips()};
+document.getElementById('planEdit').onclick=e=>{pEdit=!pEdit;e.target.textContent=pEdit?'✓ Terminer':'✎ Modifier';document.getElementById('planAdd').style.display=document.getElementById('planReset').style.display=pEdit?'':'none';renderPlan();renderChips()};
+document.getElementById('planAdd').onclick=()=>{plan.push(['Nouvel objectif','Décrivez l’activité…']);store.set('myl_plan',plan);renderPlan()};
+document.getElementById('planReset').onclick=()=>{if(confirm('Revenir au programme par défaut ?')){plan=defPlan.map(r=>[...r]);store.set('myl_plan',plan);renderPlan()}};
+renderPlan();
+/* ---- Mini-checklist modifiable ---- */
+const defChk=['Mon objectif est précis','Mon téléphone est éloigné','Mon bureau est prêt','J’ai prévu une pause'].map(t=>({t,c:false}));
+let chk=store.get('myl_chk',defChk),cEdit=false;const cList=document.getElementById('chkList');
+const saveChk=()=>store.set('myl_chk',chk);
+function renderChk(){cList.innerHTML='';document.getElementById('chkAdd').classList.toggle('on',cEdit);document.getElementById('chkReset').style.display=cEdit?'':'none';
+chk.forEach((it,i)=>{if(cEdit){const r=document.createElement('div');r.className='chk-row';const t=document.createElement('input');t.type='text';t.value=it.t;t.oninput=()=>{it.t=t.value;saveChk()};const x=document.createElement('button');x.className='xbtn';x.textContent='✕';x.onclick=()=>{chk.splice(i,1);saveChk();renderChk()};r.append(t,x);cList.appendChild(r)}
+else{const l=document.createElement('label');l.style.display='block';const c=document.createElement('input');c.type='checkbox';c.checked=it.c;c.onchange=()=>{it.c=c.checked;saveChk()};l.append(c,' '+it.t);cList.appendChild(l)}})}
+document.getElementById('chkEdit').onclick=e=>{cEdit=!cEdit;e.target.textContent=cEdit?'✓ Terminer':'✎ Modifier';renderChk()};
+function addChk(){const i=document.getElementById('chkNew'),v=i.value.trim();if(!v)return;chk.push({t:v,c:false});saveChk();i.value='';renderChk()}
+document.getElementById('chkAddBtn').onclick=addChk;document.getElementById('chkNew').onkeydown=e=>{if(e.key==='Enter')addChk()};
+document.getElementById('chkReset').onclick=()=>{if(confirm('Revenir à la checklist par défaut ?')){chk=defChk.map(x=>({...x}));saveChk();renderChk()}};
+renderChk();
+/* ---- QR de partage ---- */
+const shI=document.getElementById('shareUrl'),qrBox=document.getElementById('qrcode');
+shI.value=/^https?:/.test(location.href)?location.href.split('#')[0]:store.get('myl_url','');
+function drawQR(){const v=shI.value.trim();qrBox.innerHTML='';store.set('myl_url',v);
+if(!v){qrBox.textContent='Collez un lien';return}
+if(window.QRCode)new QRCode(qrBox,{text:v,width:140,height:140,correctLevel:QRCode.CorrectLevel.M});else qrBox.textContent='QR indisponible hors ligne'}
+shI.oninput=drawQR;drawQR();
+document.getElementById('copyUrl').onclick=async e=>{try{await navigator.clipboard.writeText(shI.value);e.target.textContent='Copié ✓'}catch(x){shI.select();e.target.textContent='Sélectionné · Ctrl+C'}setTimeout(()=>e.target.textContent='Copier le lien',1800)};
+</script>
+</body>
+</html>
